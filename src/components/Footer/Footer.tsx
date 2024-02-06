@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
               <div className="flex flex-col ml-5 w-[17%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col grow text-xl text-black max-md:mt-10">
                   <div>Contact Us</div>
-                  <div className="mt-16 max-md:mt-10">Address:</div>{" "}
-                  <div className="mt-11 max-md:mt-10">Phone No:</div>{" "}
-                  <div className="mt-11 max-md:mt-10">Fax:</div>{" "}
+                  <div className="mt-16 max-md:mt-10">Address:</div>
+                  <div className="mt-11 max-md:mt-10">Phone No:</div>
+                  <div className="mt-11 max-md:mt-10">Fax:</div>
                   <div className="mt-11 max-md:mt-10">Email:</div>
                 </div>
               </div>
