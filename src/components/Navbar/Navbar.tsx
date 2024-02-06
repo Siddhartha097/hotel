@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
     return (
-        <nav className="flex justify-between items-center flex-grow bg-[#E8B587A1] shadow-sm">
+        <nav className="flex justify-between items-center flex-grow bg-[#E8B587A1] shadow-md shadow-black">
             {/* Logo */}
             <div className='p-6 font-medium whitespace-nowrap'>
                 <Link to="/">
