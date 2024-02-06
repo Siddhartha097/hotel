@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
             <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
               <div className="flex flex-col w-[42%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col text-base text-black max-md:mt-10">
-                  <div className="text-xl italiano text-yellow-700">PrecisionHub</div>{" "}
-                  <div className="self-start mt-2.5 ml-9 font-bold max-md:ml-2.5">
+                  <div className="text-4xl italiano text-yellow-700">PrecisionHub</div>{" "}
+                  <div className="self-start ml-9 font-bold text-lg max-md:ml-2.5">
                     Hotel
                   </div>{" "}
                   <div className="mt-11 max-md:mt-10">
