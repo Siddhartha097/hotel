@@ -26,16 +26,16 @@ const Footer: React.FC = () => {
               </div>{" "}
               <div className="flex flex-col ml-5 w-[42%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col grow text-xl text-black max-md:mt-10">
-                  <div>About Us</div>{" "}
-                  <div className="mt-16 max-md:mt-10">Company Details</div>{" "}
-                  <div className="mt-10">Know More About Company</div>{" "}
-                  <div className="mt-4">FAQ</div>{" "}
+                  <div>About Us</div>
+                  <div className="mt-16 max-md:mt-10">Company Details</div>
+                  <div className="mt-10">Know More About Company</div>
+                  <div className="mt-4">FAQ</div>
                   <div className="mt-10">View Details</div>
                 </div>
               </div>{" "}
               <div className="flex flex-col ml-5 w-[17%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col grow text-xl text-black max-md:mt-10">
-                  <div>Contact Us</div>{" "}
+                  <div>Contact Us</div>
                   <div className="mt-16 max-md:mt-10">Address:</div>{" "}
                   <div className="mt-11 max-md:mt-10">Phone No:</div>{" "}
                   <div className="mt-11 max-md:mt-10">Fax:</div>{" "}
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col ml-5 w-[26%] max-md:ml-0 max-md:w-full">
           
             <div className='flex flex-col w-full max-w-sm items-center gap-1.5'>
-              <Label htmlFor="email">Contact Us</Label>
+              <Label htmlFor="email" className='font-bold text-yellow-700 inria text-xl tracking-wide pb-10'>Stay in Touch!</Label>
               <div className="flex w-full max-w-sm items-center space-x-2  text-xl max-md:mt-10">
                 <Input type='email' placeholder='Email' />
                 <Button type='submit'>Send</Button>
