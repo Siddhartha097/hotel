@@ -1,45 +1,59 @@
-import React from 'react';
 
-import image from './hotel.png'
-import Navbar from '@/components/Navbar/Navbar';
-import { Button } from '@/components/ui/button';
+//components
+import { Carousel, CarouselContent, CarouselItem, } from "@/components/ui/carousel";
+import Hero from "./Hero";
+import { Button } from "@/components/ui/button";
 
-const Home: React.FC = () => {
+//images
+import { pool, hall, hotel, cafe, bedroom, about } from "./images";
+
+
+
+const Home = () => {
     return (
-        <div>
-            <section className='w-full h-full md:flex'>
-                <div className='w-full items-center justify-between bg-[#E8B587A1]'>
-                    <Navbar />
-                    <section className='flex px-20 py-12 pb-32 flex-col justify-center text-left space-y-2 '>
-                        <h1 className="text-4xl island text-[#B26C02EB] md:text-7xl">Memorable</h1>
-                    
-                        <h1 className='text-2xl md:text-5xl font-medium inria tracking-wider antialiased'>Hotels for 
-                            
-                            <p>Moments <span className='island text-4xl text-[#B26C02EB] md:text-7xl'>Rich</span></p>
-                            <p>in Emotions</p>
-                        </h1>
-                        <br />
-                        <p className='inria tracking-wide text-base md:text-lg'>Book Now and get the best Prices</p>
-                    </section>
-                    
+        <main className="w-full h-full">
+            <Hero />
+            <div className=" px-6 mt-5 md:px-10 ">
+                <img src={pool} className="object-contain rounded-md" alt="pool" />
+                <div className=" flex pt-5 items-center justify-between space-x-6">
+                    <Carousel>
+                        <CarouselContent className="">
+                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                                <Button className="absolute ml-2 bg-transparent text-white font-semibold text-sm lg:text-lg hover:text-black" variant={'secondary'}>Our Rooms</Button>
+                                <img src={bedroom} className="rounded-md" alt="bedroom" />
+                            </CarouselItem>
+                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                                <Button className="absolute ml-2 bg-transparent text-white font-semibold hover:text-black text-sm lg:text-lg" variant={'secondary'}>Dining</Button>
+                                <img src={cafe} className="rounded-md" alt="cafe" />
+                            </CarouselItem>
+                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                                <Button className="absolute ml-2 bg-transparent text-white font-semibold hover:text-black text-sm lg:text-lg" variant={'secondary'}>Offers</Button>
+                                <img src={hall} className="rounded-md" alt="hall" />
+                            </CarouselItem>
+                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                                <Button className="absolute ml-2 bg-transparent text-white font-semibold hover:text-black text-sm lg:text-lg" variant={'secondary'}>Gallery</Button>
+                                <img src={hotel} className="rounded-md" alt="hotel" />
+                            </CarouselItem>
+                        </CarouselContent>
+                    </Carousel>
                 </div>
-                <div className='h-full w-full'>
-                    <Button variant="outline" className='absolute bg-transparent text-white top-5 right-5'>Book Now</Button>
-                    <img className='w-full object-fill' src={image} alt='hero' />
+            </div>
+            <div className="md:flex-row px-6 md:px-10 gap-10 flex flex-col items-center justify-between mt-5">
+                <div className="flex flex-col">
+                    <h3 className="text-2xl md:text-3xl lg:text-5xl island text-yellow-700">About Us</h3>
+                    <h1 className=" island text-yellow-700 text-4xl md:text-6xl lg:text-8xl">PrecisionHub <span className="inter text-black lg:text-4xl"> Hotel</span></h1>
+                    <p className="text-sm tracking-wide inria font-medium">
+                        Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights. <br />
+                        A Symphony of Luxury: Step into a world where luxury isn't just a word; it's an experience woven into every thread of our exquisite interiors. From the moment you enter our grand lobby adorned with crystal chandeliers to the sumptuous comfort of your meticulously appointed room, you'll find a seamless fusion of style and sophistication. <br />
+                        Unrivaled Comfort: Indulge in a night of unparalleled comfort in our plush, king-sized beds adorned with premium linens. Each room is a haven of tranquility, featuring state-of-the-art amenities, complimentary Wi-Fi, and panoramic views of the city skyline or our lush garden oasis. <br />
+                        Gastronomic Delights: Savor the culinary masterpieces crafted by our award-winning chefs. Whether you're dining in our elegant restaurant, enjoying cocktails at the rooftop bar with panoramic city views, or indulging in room service, every bite is a journey through flavors that tantalize the taste buds.
+                    </p>
                 </div>
-            </section>
-
-            <section className='flex max-md:flex-col max-md:gap-0'>
-                <div className='grow justify-center items-start py-12 pr-16 pl-24 w-full text-4xl text-black border border-solid bg-opacity-60 border-opacity-90 max-md:pr-5 max-md:pl-8 inria max-md:max-w-full border-[#B26C02EB] bg-[#E8B587A1] max-md:text-2xl'>       
-                    Here,Local talents
-                    <br />
-                    comes together
+                <div className="w-full h-full">
+                    <img src={about} className="rounded-full" alt="" />
                 </div>
-                <div className=' max-md:text-sm grow justify-center items-center py-12 pr-16 pl-24 w-full text-base text-right text-black border border-solid bg-opacity-60 border-opacity-90 max-md:px-5 max-md:max-w-full bg-[#E8B587A1] inria border-[#B26C02EB]'>
-                    Escape the hustle and bustle of everyday life as you enter our tranquil oasis. Our lush gardens, soothing water features, and secluded nooks offer a retreat from the outside world, creating a haven of peace and relaxation.
-                </div>
-            </section>
-        </div>
+            </div>
+        </main>
     )
 }
 
