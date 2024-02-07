@@ -41,7 +41,7 @@ const Home = () => {
             <div className="md:flex-row px-6 md:px-10 gap-10 flex flex-col items-center justify-between mt-5">
                 <div className="flex flex-col">
                     <h3 className="text-2xl md:text-3xl lg:text-5xl island text-yellow-700">About Us</h3>
-                    <h1 className=" island text-yellow-700 text-4xl md:text-6xl lg:text-8xl">PrecisionHub <span className="inter text-black lg:text-4xl"> Hotel</span></h1>
+                    <h1 className=" island text-yellow-700 text-4xl md:text-6xl lg:text-8xl">PrecisionHub <span className="inter text-black lg:text-4xl font-semibold"> Hotel</span></h1>
                     <p className="text-sm tracking-wide inria font-medium">
                         Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights. <br />
                         A Symphony of Luxury: Step into a world where luxury isn't just a word; it's an experience woven into every thread of our exquisite interiors. From the moment you enter our grand lobby adorned with crystal chandeliers to the sumptuous comfort of your meticulously appointed room, you'll find a seamless fusion of style and sophistication. <br />
