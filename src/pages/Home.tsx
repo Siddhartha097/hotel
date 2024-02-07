@@ -13,9 +13,9 @@ const Home = () => {
     return (
         <main className="w-full h-full">
             <Hero />
-            <div className=" px-6 mt-5 md:px-10 ">
-                <img src={pool} className="object-contain rounded-md" alt="pool" />
-                <div className=" flex pt-5 items-center justify-between space-x-6">
+            <div className=" px-6 mt-0 md:px-10 ">
+                <img src={pool} className="object-contain rounded-b-md" alt="pool" />
+                <div className=" flex pt-2 items-center justify-between space-x-6">
                     <Carousel>
                         <CarouselContent className="">
                             <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
