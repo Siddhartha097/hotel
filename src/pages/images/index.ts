@@ -6,6 +6,9 @@ import hero from './hero.png';
 import hall from './hall.png';
 import about from './about.jpg';
 import About from './about.png';
+import bar from './bar.png';
+import drinks from './drinks.png';
+import spa from './spa.png';
 
 
 export { 
@@ -17,5 +20,7 @@ export {
     hero,
     about,
     About,
-    
+    spa,
+    drinks,
+    bar,
     }

@@ -5,7 +5,8 @@ import Hero from "./Hero";
 import { Button } from "@/components/ui/button";
 
 //images
-import { pool, hall, hotel, cafe, bedroom, about } from "./images";
+import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks } from "./images";
+import { Link } from "react-router-dom";
 
 
 
@@ -52,6 +53,38 @@ const Home = () => {
                 <div className="w-full h-full">
                     <img src={about} className="rounded-full" alt="" />
                 </div>
+            </div>
+            <div className="flex gap-6 flex-col md:flex-row items-center justify-center w-full h-full px-6 mt-7 md:px-10">
+                <section className="gap-5 basis-4/5 bg-neutral-300 p-8 flex flex-col items-center rounded-md shadow-md">
+                    <h1 className="text-yellow-600 inria text-4xl">Welcome</h1>
+                    <h3 className="font-semibold">Enjoy Your Stay in Our Hotel</h3>
+                    <p className="text-sm inria text-center">
+                        Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights.
+                        A Symphony of Luxury:
+                    </p>
+                </section>
+                <section>
+                    <Carousel>
+                        <CarouselContent>
+                            <CarouselItem className='basis-1/2 text-black md:basis-1/3 flex items-center justify-center  '>
+                                <p className="inria tracking-wide absolute md:text-lg
+                                 font-bold  transition-all  z-10">Restuarent & Bar</p>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={bar} alt="bar" />
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 md:basis-1/3 flex items-center justify-center '>
+                                <p className=" z-10 inria absolute md:text-lg
+                                 font-bold transition-all ">24Hrs Room Services</p>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={drinks} alt="bar" />
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 md:basis-1/3 flex items-center justify-center '>
+                                <p className=" z-10 inria tracking-wide absolute md:text-lg
+                                 font-bold  transition-all ">Fitness & Spa</p>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={spa} alt="bar" />
+                            </CarouselItem>
+                            
+                        </CarouselContent>
+                    </Carousel>
+                </section>
             </div>
         </main>
     )
