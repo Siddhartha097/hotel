@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 //images
 import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks } from "./images";
-import { Link } from "react-router-dom";
+
 
 
 
