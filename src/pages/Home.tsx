@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import { Button } from "@/components/ui/button";
 
 //images
-import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1, room3, room2 } from "./images";
+import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1, room3, room2, room4 } from "./images";
 import Box from "@/components/Box";
 
 
