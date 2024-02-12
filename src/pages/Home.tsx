@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import { Button } from "@/components/ui/button";
 
 //images
-import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1 } from "./images";
+import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1, room3, room2 } from "./images";
 import Box from "@/components/Box";
 
 
@@ -100,19 +100,19 @@ const Home = () => {
                                 <Button className="absolute top-3/4" variant={"secondary"}>
                                     $25.00
                                 </Button>
-                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room2} alt="room" />
                             </CarouselItem>
                             <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
                                 <Button className="absolute top-3/4" variant={"secondary"}>
                                     $25.00
                                 </Button>
-                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room3} alt="room" />
                             </CarouselItem>
                             <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
                                 <Button className="absolute top-3/4" variant={"secondary"}>
                                     $25.00
                                 </Button>
-                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room4} alt="room" />
                             </CarouselItem>
                         </CarouselContent>
                     </Carousel>
