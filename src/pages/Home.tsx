@@ -97,12 +97,21 @@ const Home = () => {
                                 <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
                             </CarouselItem>
                             <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <Button className="absolute top-3/4" variant={"secondary"}>
+                                    $25.00
+                                </Button>
                                 <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
                             </CarouselItem>
                             <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <Button className="absolute top-3/4" variant={"secondary"}>
+                                    $25.00
+                                </Button>
                                 <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
                             </CarouselItem>
                             <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <Button className="absolute top-3/4" variant={"secondary"}>
+                                    $25.00
+                                </Button>
                                 <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
                             </CarouselItem>
                         </CarouselContent>
