@@ -9,7 +9,10 @@ import About from './about.png';
 import bar from './bar.png';
 import drinks from './drinks.png';
 import spa from './spa.png';
-
+import room1 from './room1.png';
+import room2 from './room2.png';
+import room3 from './room3.png';
+import room4 from './room4.png';
 
 export { 
     pool,
@@ -23,4 +26,8 @@ export {
     spa,
     drinks,
     bar,
+    room1,
+    room2,
+    room3,
+    room4,
     }

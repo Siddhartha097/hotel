@@ -5,7 +5,8 @@ import Hero from "./Hero";
 import { Button } from "@/components/ui/button";
 
 //images
-import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks } from "./images";
+import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1 } from "./images";
+import Box from "@/components/Box";
 
 
 
@@ -54,15 +55,15 @@ const Home = () => {
                     <img src={about} className="rounded-full" alt="" />
                 </div>
             </div>
-            <div className="flex gap-6 flex-col md:flex-row items-center justify-center w-full h-full px-6 mt-7 md:px-10">
-                <section className="gap-5 basis-4/5 bg-neutral-300 p-8 flex flex-col items-center rounded-md shadow-md">
-                    <h1 className="text-yellow-600 inria text-4xl">Welcome</h1>
-                    <h3 className="font-semibold">Enjoy Your Stay in Our Hotel</h3>
-                    <p className="text-sm inria text-center">
-                        Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights.
-                        A Symphony of Luxury:
-                    </p>
-                </section>
+            <div className="flex gap-6 flex-col md:flex-row items-center justify-center w-full h-full px-6 mt-10 md:px-10">
+                <Box
+                    title="Welcome"
+                    subtitle="Enjoy Your Stay in Our Hotel"
+                    description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights.
+                    A Symphony of Luxury"
+                    rounded="rounded-md"
+                    bgColor="bg-neutral-200"
+                />
                 <section>
                     <Carousel>
                         <CarouselContent>
@@ -81,10 +82,41 @@ const Home = () => {
                                  font-bold  transition-all ">Fitness & Spa</p>
                                 <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={spa} alt="bar" />
                             </CarouselItem>
-                            
                         </CarouselContent>
                     </Carousel>
                 </section>
+            </div>
+            <div className="flex gap-6 flex-col md:flex-row items-center justify-center w-full h-full px-6 mt-10 md:px-10">
+               <section>
+                <Carousel>
+                        <CarouselContent>
+                            <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <Button className="absolute top-3/4" variant={"secondary"}>
+                                    $25.00
+                                </Button>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 md:basis-1/4 flex items-center justify-center '>
+                                <img className="rounded-md hover:blur-sm cursor-pointer transition-all hover:scale-95" src={room1} alt="room" />
+                            </CarouselItem>
+                        </CarouselContent>
+                    </Carousel>
+               </section>
+                <Box
+                    title="Welcome"
+                    subtitle="New Suits For
+                    You"
+                    description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights.
+                    A Symphony of Luxury"
+                    rounded="rounded-md"
+                    bgColor="bg-neutral-200"
+                />
             </div>
         </main>
     )
