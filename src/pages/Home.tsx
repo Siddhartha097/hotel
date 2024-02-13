@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import { Button } from "@/components/ui/button";
 
 //images
-import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1, room3, room2, room4 } from "./images";
+import { pool, hall, hotel, cafe, bedroom, about, bar, spa, drinks, room1, room3, room2, room4, food } from "./images";
 import Box from "@/components/Box";
 
 
@@ -20,19 +20,19 @@ const Home = () => {
                 <div className=" flex pt-2 items-center justify-between space-x-6">
                     <Carousel>
                         <CarouselContent className="">
-                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                            <CarouselItem className="md:basis-1/3 relative lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
                                 <Button className="absolute ml-2 bg-transparent text-white font-semibold text-sm lg:text-lg hover:text-black" variant={'secondary'}>Our Rooms</Button>
                                 <img src={bedroom} className="rounded-md" alt="bedroom" />
                             </CarouselItem>
-                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                            <CarouselItem className="md:basis-1/3 relative lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
                                 <Button className="absolute ml-2 bg-transparent text-white font-semibold hover:text-black text-sm lg:text-lg" variant={'secondary'}>Dining</Button>
                                 <img src={cafe} className="rounded-md" alt="cafe" />
                             </CarouselItem>
-                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                            <CarouselItem className="md:basis-1/3 relative lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
                                 <Button className="absolute ml-2 bg-transparent text-white font-semibold hover:text-black text-sm lg:text-lg" variant={'secondary'}>Offers</Button>
                                 <img src={hall} className="rounded-md" alt="hall" />
                             </CarouselItem>
-                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
+                            <CarouselItem className="md:basis-1/3 relative lg:basis-1/4 basis-1/2 flex items-center transition-all justify-start">
                                 <Button className="absolute ml-2 bg-transparent text-white font-semibold hover:text-black text-sm lg:text-lg" variant={'secondary'}>Gallery</Button>
                                 <img src={hotel} className="rounded-md" alt="hotel" />
                             </CarouselItem>
@@ -67,18 +67,18 @@ const Home = () => {
                 <section>
                     <Carousel>
                         <CarouselContent>
-                            <CarouselItem className='basis-1/2 text-black md:basis-1/3 flex items-center justify-center  '>
-                                <p className="inria w-min tracking-wide absolute md:text-lg
+                            <CarouselItem className='basis-1/2 relative text-black md:basis-1/3 flex items-center justify-center  '>
+                                <p className="inria w-min md:w-fit tracking-wide absolute md:text-lg
                                  font-bold  transition-all  z-10">Restuarent & Bar</p>
                                 <img className="rounded-md cursor-pointer transition-all scale-90 hover:scale-100" src={bar} alt="bar" />
                             </CarouselItem>
-                            <CarouselItem className='basis-1/2 md:basis-1/3 flex items-center justify-center'>
-                                <p className=" z-10 inria w-min absolute md:text-lg
+                            <CarouselItem className='basis-1/2 relative md:basis-1/3 flex items-center justify-center'>
+                                <p className=" z-10 inria w-min md:w-fit absolute md:text-lg
                                  font-bold transition-all ">24Hrs Room Services</p>
                                 <img className="rounded-md cursor-pointer transition-all scale-90 hover:scale-100" src={drinks} alt="bar" />
                             </CarouselItem>
-                            <CarouselItem className='basis-1/2 md:basis-1/3 flex items-center justify-center '>
-                                <p className=" z-10 inria w-min tracking-wide absolute md:text-lg
+                            <CarouselItem className='basis-1/2 relative md:basis-1/3 flex items-center justify-center '>
+                                <p className=" z-10 inria w-min md:w-fit tracking-wide absolute md:text-lg
                                  font-bold  transition-all ">Fitness & Spa</p>
                                 <img className="rounded-md cursor-pointer transition-all scale-90 hover:scale-100" src={spa} alt="bar" />
                             </CarouselItem>
@@ -86,59 +86,82 @@ const Home = () => {
                     </Carousel>
                 </section>
             </div>
-            <div className="flex flex-col items-center justify-between">
-                <div className="flex items-center justify-between gap-20">
-                    
-                    
-                </div>
-                <div className="flex gap-6 flex-col md:flex-row items-center justify-center w-full h-full px-6 mt-10 md:px-10">
-                    <section className="flex flex-col-reverse gap-5 md:flex-col">
-                        <Button className="text-xl w-fit px-8 py-6 bg-[#B26C02] text-black inria font-semibold hover:bg-neutral-400">View All Rooms</Button>
-                        <Carousel>
-                            <CarouselContent>
-                                <CarouselItem className='basis-1/2 md:basis-1/4 inria font-semibold flex items-center justify-center flex-col'>
-                                    <Button className="absolute bg-yellow-600 z-10 top-3/4" variant={"secondary"}>
-                                        $19.00
-                                    </Button>
-                                    <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room1} alt="room" />
-                                    President Suite
-                                </CarouselItem>
-                                <CarouselItem className='basis-1/2 md:basis-1/4 inria font-semibold flex items-center justify-center flex-col'>
-                                    <Button className="absolute bg-yellow-600 z-10 top-3/4" variant={"secondary"}>
-                                        $22.00
-                                    </Button>
-                                    <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room2} alt="room" />
-                                    Single BedRoom
-                                </CarouselItem>
-                                <CarouselItem className='basis-1/2 md:basis-1/4 inria font-semibold flex flex-col items-center justify-center '>
-                                    <Button className="absolute bg-yellow-600 z-10 top-3/4" variant={"secondary"}>
-                                        $25.00
-                                    </Button>
-                                    <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room3} alt="room" />
-                                    Double BedRoom
-                                </CarouselItem>
-                                <CarouselItem className='basis-1/2 md:basis-1/4 inria font-semibold flex flex-col items-center justify-center '>
-                                    <Button className="absolute bg-yellow-600 z-10 top-3/4" variant={"secondary"}>
-                                        $30.00
-                                    </Button>
-                                    <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room4} alt="room" />
-                                    Twin Bedroom
-                                </CarouselItem>
-                            </CarouselContent>
-                        </Carousel>
-                    </section>
-                    <section className="flex flex-col items-end gap-5 basis-3/5">
-                        <h1 className="text-[#B26C02] inria text-3xl font-bold">
-                            Accomodation Room for Luxuary Stay
-                        </h1>
-                        <Box
-                            title="Welcome"
-                            subtitle="New Suits For You"
-                            description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights. A Symphony of Luxury"
-                            rounded="rounded-md"
-                            bgColor="bg-neutral-200"
-                        />
-                    </section>
+            <div className="flex gap-6 flex-col-reverse md:flex-row items-center justify-center w-full h-full px-6 mt-10 md:px-10">
+                <section className="flex flex-col-reverse gap-5 md:flex-col">
+                    <Button className="text-xl w-fit px-8 py-6 bg-[#B26C02] text-black inria font-semibold hover:bg-neutral-400">View All Rooms</Button>
+                    <Carousel>
+                        <CarouselContent>
+                            <CarouselItem className='basis-1/2 relative md:basis-1/4 inria font-semibold flex items-center justify-center flex-col'>
+                                <Button className="absolute bg-yellow-600 z-10 " variant={"secondary"}>
+                                    $19.00
+                                </Button>
+                                <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room1} alt="room" />
+                                President Suite
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 relative md:basis-1/4 inria font-semibold flex items-center justify-center flex-col'>
+                                <Button className="absolute bg-yellow-600 z-10 " variant={"secondary"}>
+                                    $22.00
+                                </Button>
+                                <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room2} alt="room" />
+                                Single BedRoom
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 relative md:basis-1/4 inria font-semibold flex flex-col items-center justify-center '>
+                                <Button className="absolute bg-yellow-600 z-10 " variant={"secondary"}>
+                                    $25.00
+                                </Button>
+                                <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room3} alt="room" />
+                                Double BedRoom
+                            </CarouselItem>
+                            <CarouselItem className='basis-1/2 relative md:basis-1/4 inria font-semibold flex flex-col items-center justify-center '>
+                                <Button className="absolute bg-yellow-600 z-10 " variant={"secondary"}>
+                                    $30.00
+                                </Button>
+                                <img className="rounded-md cursor-pointer transition-all scale-95 hover:scale-100" src={room4} alt="room" />
+                                Twin Bedroom
+                            </CarouselItem>
+                        </CarouselContent>
+                    </Carousel>
+                </section>
+                <section className="flex flex-col items-end gap-5 basis-3/5">
+                    <h1 className="text-[#B26C02] inria text-3xl font-bold">
+                        Accomodation Room for Luxuary Stay
+                    </h1>
+                    <Box
+                        title="Welcome"
+                        subtitle="New Suits For You"
+                        description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights. A Symphony of Luxury"
+                        rounded="rounded-md"
+                        bgColor="bg-neutral-200"
+                    />
+                </section>
+            </div>
+            <div className="flex gap-6 flex-col inria items-center justify-center w-full h-full px-6 mt-10 md:px-10">
+                <h1 className="text-4xl lg:text-5xl text-[#B26C02] font-bold">Food Court</h1>
+                <p className=" text-center text-sm font-semibold">
+                    Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights.
+                    A Symphony of Luxury: Step into a world where luxury isn't just a word; it's an experience woven into every thread of our exquisite interiors. From the moment you enter our grand lobby adorned with crystal chandeliers to the sumptuous comfort of your meticulously appointed room, you'll find a seamless fusion of style and sophistication.
+                </p>
+            </div>
+            <div className="flex flex-col inria px-6 mt-10 md:px-10 w-full md:flex-row">
+                <Box 
+                    title="Delicious"
+                    subtitle="Taste & Enjoy Best Food"
+                    description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights. A Symphony of Luxury."
+                    bgColor="bg-[#E8B587A1]"
+                />
+                <div className="relative">
+                    <div className="absolute flex-col flex p-10 items-center space-y-6 justify-center bg-black/50 h-full w-full z-10">
+                        <h1 className="text-3xl text-[#B22D02] font-semibold">Our Restuarent Menu</h1>
+                        <p className="text-white text-sm text-center">
+                            Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and  heights.
+                        </p>
+                        <ul className="flex w-full px-10 items-center justify-between space-x-6 text-2xl text-white">
+                            <li>Mains</li>
+                            <li>Deserts</li>
+                            <li>Drinks</li>
+                        </ul>
+                    </div>
+                    <img src={food} alt="food" />
                 </div>
             </div>
         </main>

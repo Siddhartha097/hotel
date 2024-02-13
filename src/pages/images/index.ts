@@ -13,8 +13,10 @@ import room1 from './room1.png';
 import room2 from './room2.png';
 import room3 from './room3.png';
 import room4 from './room4.png';
+import food from './food.png';
 
 export { 
+    food,
     pool,
     hotel,
     bedroom,
