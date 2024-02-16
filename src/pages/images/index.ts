@@ -14,8 +14,12 @@ import room2 from './room2.png';
 import room3 from './room3.png';
 import room4 from './room4.png';
 import food from './food.png';
+import user1 from './user1.png';
+import user2 from './user2.png';
 
 export { 
+    user1,
+    user2,
     food,
     pool,
     hotel,

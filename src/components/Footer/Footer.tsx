@@ -5,7 +5,7 @@ import { Label } from '../ui/label';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="self-stretch py-14 pr-9 pl-20 pt-20 w-full shadow-sm max-md:px-5 max-md:mt-10 max-md:max-w-full">
+    <footer className="self-stretch py-14 pr-9 pl-20 pt-20 w-full shadow-sm max-md:px-5 max-md:mt-10 max-md:max-w-full bg-neutral-300">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
         <div className="flex flex-col w-[74%] max-md:ml-0 max-md:w-full">
           <div className="mt-3.5 max-md:mt-10 max-md:max-w-full">
