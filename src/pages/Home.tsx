@@ -12,14 +12,12 @@ import Hero from "./Hero";
 import { about, bar, bedroom, cafe, drinks, food, hall, hotel, pool, room1, room2, room3, room4, spa, user1, user2 } from "./images";
 import Features from "@/components/Home/Features";
 
-
-
-
-
 const Home = () => {
     return (
         <main className="w-full h-full mb-10">
             <Hero />
+
+            {/* Hotel Options */}
             <div className=" px-6 mt-0 md:px-10 ">
                 <img src={pool} className="object-contain rounded-b-md" alt="pool" />
                 <div className=" flex pt-2 items-center justify-between space-x-6">
@@ -45,6 +43,8 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
+
+            {/* About Us */}
             <div className="md:flex-row px-6 md:px-10 gap-10 flex flex-col items-center justify-between mt-5">
                 <div className="flex flex-col">
                     <h3 className="text-2xl md:text-3xl lg:text-5xl island text-yellow-700">About Us</h3>
@@ -60,6 +60,8 @@ const Home = () => {
                     <img src={about} className="rounded-full" alt="" />
                 </div>
             </div>
+
+            {/* Features */}
             <div className="flex gap-6 flex-col md:flex-row items-center justify-center w-full h-full px-6 mt-10 md:px-10">
                 <Box
                     title="Welcome"
@@ -89,6 +91,8 @@ const Home = () => {
                     </Carousel>
                 </section>
             </div>
+
+            {/* Rooms */}
             <div className="flex gap-6 flex-col-reverse md:flex-row items-center justify-center w-full h-full px-6 mt-10 md:px-10">
                 <section className="flex flex-col-reverse gap-5 md:flex-col">
                     <Button className="text-xl w-fit px-8 py-6 bg-[#B26C02] text-black inria font-semibold hover:bg-neutral-400">View All Rooms</Button>
@@ -131,6 +135,8 @@ const Home = () => {
                     />
                 </section>
             </div>
+
+            {/* Food Court */}
             <div className="flex gap-6 flex-col inria items-center justify-center w-full h-full px-6 mt-10 md:px-10">
                 <h1 className="text-4xl lg:text-5xl text-[#B26C02] font-bold">Food Court</h1>
                 <p className=" text-center text-sm font-semibold">
@@ -138,6 +144,8 @@ const Home = () => {
                     A Symphony of Luxury: Step into a world where luxury isn't just a word; it's an experience woven into every thread of our exquisite interiors. From the moment you enter our grand lobby adorned with crystal chandeliers to the sumptuous comfort of your meticulously appointed room, you'll find a seamless fusion of style and sophistication.
                 </p>
             </div>
+
+            {/* Menu */}
             <div className="flex flex-col inria px-6 mt-10 md:px-10 w-full md:flex-row">
                 <Box 
                     title="Delicious"
@@ -160,35 +168,39 @@ const Home = () => {
                     <img src={food} alt="food" />
                 </div>
             </div>
+
+            {/* Testimonials */}
             <div className="flex flex-col py-6 md:py-10 lg:py-12 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row bg-[#D9D9D9]">
-                    <section className="md:basis-2/4">
-                        <Box 
-                            title="Testimonial"
-                            subtitle="What They Say About Us !"
-                            description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and"
-                            bgColor="bg-neutral-200"
-                            rounded="rounded-md"
-                        />
-                    </section>
-                    <section className="">
-                        <Carousel>
-                            <CarouselContent>
-                                <Testimonials 
-                                    title="TRIDIB PAL"
-                                    subTitle="UI/UX Designer"
-                                    avatar={user1}
-                                    comment="  Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and "
-                                />
-                                <Testimonials 
-                                    title="AVIJIT MAITY"
-                                    subTitle="Director"
-                                    avatar={user2}
-                                    comment="  Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and "
-                                />
-                            </CarouselContent>
-                        </Carousel>
-                    </section>
+                <section className="md:basis-2/4">
+                    <Box 
+                        title="Testimonial"
+                        subtitle="What They Say About Us !"
+                        description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and"
+                        bgColor="bg-neutral-200"
+                        rounded="rounded-md"
+                    />
+                </section>
+                <section className="">
+                    <Carousel>
+                        <CarouselContent>
+                            <Testimonials 
+                                title="TRIDIB PAL"
+                                subTitle="UI/UX Designer"
+                                avatar={user1}
+                                comment="  Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and "
+                            />
+                            <Testimonials 
+                                title="AVIJIT MAITY"
+                                subTitle="Director"
+                                avatar={user2}
+                                comment="  Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and "
+                            />
+                        </CarouselContent>
+                    </Carousel>
+                </section>
             </div>
+
+            
         </main>
     )
 }
