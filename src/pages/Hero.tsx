@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
                     </section>
                     
                 </div>
-                <div className='h-full w-full'>
+                <div className='h-full w-full relative'>
                     <Button variant="outline" className='absolute bg-transparent text-white top-5 right-5'>Book Now</Button>
                     <img className='w-full object-fill' src={hero} alt='hero' />
                 </div>
