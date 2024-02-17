@@ -17,7 +17,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
 }) => {
     return (
         <>
-            <CarouselItem className="cursor-pointer space-y-5 basis-1/3 bg-neutral-100 shadow-md p-10 ml-5 text-sm ">
+            <CarouselItem className="cursor-pointer space-y-5 basis-1/3 max-md:basis-5/6 bg-neutral-100 shadow-md p-10 max-md:p-6 ml-5 text-sm ">
                 <p className="text-sm">
                     {comment}
                 </p>

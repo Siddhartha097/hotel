@@ -11,6 +11,7 @@ import Hero from "./Hero";
 //images
 import { about, bar, bedroom, cafe, drinks, food, hall, hotel, pool, room1, room2, room3, room4, spa, user1, user2 } from "./images";
 import Features from "@/components/Home/Features";
+import Enquiry from "@/components/Home/Enquiry";
 
 const Home = () => {
     return (
@@ -139,7 +140,7 @@ const Home = () => {
             {/* Food Court */}
             <div className="flex gap-6 flex-col inria items-center justify-center w-full h-full px-6 mt-10 md:px-10">
                 <h1 className="text-4xl lg:text-5xl text-[#B26C02] font-bold">Food Court</h1>
-                <p className=" text-center text-sm font-semibold">
+                <p className="text-center text-sm ">
                     Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights.
                     A Symphony of Luxury: Step into a world where luxury isn't just a word; it's an experience woven into every thread of our exquisite interiors. From the moment you enter our grand lobby adorned with crystal chandeliers to the sumptuous comfort of your meticulously appointed room, you'll find a seamless fusion of style and sophistication.
                 </p>
@@ -153,25 +154,25 @@ const Home = () => {
                     description="Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and contemporary comfort, designed to captivate the senses and elevate your stay to unparalleled heights. A Symphony of Luxury."
                     bgColor="bg-[#E8B587A1]"
                 />
-                <div className="relative">
-                    <div className="absolute flex-col flex p-10 items-center space-y-6 justify-center bg-black/50 h-full w-full z-10">
-                        <h1 className="text-3xl text-[#B22D02] font-semibold">Our Restuarent Menu</h1>
+                <div className="relative w-full h-full">
+                    <div className={`absolute  max-md:relative flex-col flex p-10 max-md:p-6 items-center space-y-6 justify-center bg-black/50 max-md:bg-black h-full w-full z-10`}>
+                        <h1 className="text-3xl max-md:text-2xl text-[#B22D02] font-semibold">Our Restuarent Menu</h1>
                         <p className="text-white text-sm text-center">
                             Discover a realm of opulence and refinement at Luxe Haven Retreat, where we redefine the art of hospitality. Nestled in the heart of [City], our hotel is a sanctuary of timeless elegance and  heights.
                         </p>
-                        <ul className="flex w-full px-10 items-center justify-between space-x-6 text-2xl text-white">
+                        <ul className="flex w-full px-10 max-md:px-5 items-center justify-between space-x-6 text-2xl max-md:text-xl text-white">
                             <li>Mains</li>
                             <li>Deserts</li>
                             <li>Drinks</li>
                         </ul>
                     </div>
-                    <img src={food} alt="food" />
+                    <img className="object-fill" src={food} alt="food" />
                 </div>
             </div>
 
             {/* Testimonials */}
-            <div className="flex flex-col py-6 md:py-10 lg:py-12 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row bg-[#D9D9D9]">
-                <section className="md:basis-2/4">
+            <div className="flex flex-col py-6 md:py-10 lg:py-12 max-md:space-y-8 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row bg-[#D9D9D9]">
+                <section className=" md:basis-3/4">
                     <Box 
                         title="Testimonial"
                         subtitle="What They Say About Us !"
@@ -182,7 +183,7 @@ const Home = () => {
                 </section>
                 <section className="">
                     <Carousel>
-                        <CarouselContent>
+                        <CarouselContent className="">
                             <Testimonials 
                                 title="TRIDIB PAL"
                                 subTitle="UI/UX Designer"
@@ -200,6 +201,12 @@ const Home = () => {
                 </section>
             </div>
 
+            {/* Enquiry */}
+            <div className='flex flex-col py-6 md:py-10 lg:py-12 max-md:space-y-8 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row'>
+               <section>
+                    <Enquiry />
+               </section>
+            </div>
             
         </main>
     )
