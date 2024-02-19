@@ -37,9 +37,9 @@ const Enquiry = () => {
 
 
     return (
-        <main className='bg-[#B22D020A] px-10 py-6 shadow-md rounded-lg'>
+        <main className=''>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
                         control={form.control}
                         name="FirstName"
@@ -53,7 +53,59 @@ const Enquiry = () => {
                         </FormItem>
                         )}
                     />
-                    <Button type="submit">Submit</Button>
+                    <FormField
+                        control={form.control}
+                        name="LastName"
+                        render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className='font-semibold'>Last Name</FormLabel>
+                            <FormControl>
+                                <Input className='border border-neutral-500' placeholder="" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="Address"
+                        render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className='font-semibold'>Address</FormLabel>
+                            <FormControl>
+                                <Input className='border border-neutral-500' placeholder="" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="PhoneNo"
+                        render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className='font-semibold'>Phone No.</FormLabel>
+                            <FormControl>
+                                <Input className='border border-neutral-500' placeholder="" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                        )}
+                    />
+                    <FormField 
+                        control={form.control}
+                        name="Text"
+                        render={({ field }) => (
+                        <FormItem className='flex flex-col'>
+                            <FormLabel className='font-semibold'>Your Enquiry</FormLabel>
+                            <FormControl>
+                                <textarea className='border border-neutral-500 rounded-md' placeholder="" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                        )}
+                    />
+                    <Button className='bg-[#B26C02] font-semibold text-black transition-all hover:bg-[#B26C02]/70 w-full text-lg' type="submit">Send</Button>
                 </form>
             </Form>
         </main>

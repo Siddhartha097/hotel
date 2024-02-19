@@ -16,6 +16,8 @@ import room4 from './room4.png';
 import food from './food.png';
 import user1 from './user1.png';
 import user2 from './user2.png';
+import victoria from './victoria.png';
+import ghat from './ghat.png';
 
 export { 
     user1,
@@ -23,6 +25,8 @@ export {
     food,
     pool,
     hotel,
+    ghat,
+    victoria,
     bedroom,
     cafe,
     hall,

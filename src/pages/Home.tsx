@@ -9,7 +9,7 @@ import Options from "@/components/Home/Options";
 import Hero from "./Hero";
 
 //images
-import { about, bar, bedroom, cafe, drinks, food, hall, hotel, pool, room1, room2, room3, room4, spa, user1, user2 } from "./images";
+import { about, bar, bedroom, cafe, drinks, food, ghat, hall, hotel, pool, room1, room2, room3, room4, spa, user1, user2, victoria } from "./images";
 import Features from "@/components/Home/Features";
 import Enquiry from "@/components/Home/Enquiry";
 
@@ -202,12 +202,28 @@ const Home = () => {
             </div>
 
             {/* Enquiry */}
-            <div className='flex flex-col py-6 md:py-10 lg:py-12 max-md:space-y-8 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row'>
-               <section>
+            <div className='flex justify-center flex-col py-6 md:py-10 lg:py-12 max-md:space-y-8 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row'>
+               <section className="bg-[#5856562e] w-1/3 shadow-md px-10 py-6 rounded-lg">
+                    <h1 className="text-5xl font-bold my-6">Enquiry</h1>
                     <Enquiry />
                </section>
-            </div>
-            
+               <section className="bg-[#000000A8] w-1/3 rounded-lg py-10 max-md:py-6 px-10 max-md:px-6">
+                    <div className="text-center">
+                        <h1 className="text-white text-5xl inria">Explore the Tourism Spot Near By </h1>
+                        <h2 className="island mt-5 text-[#B26C02] text-5xl">
+                            PrecisionHub 
+                            <br />
+                            <span className="inria text-black">Hotel</span>
+                        </h2>
+                        <img className="rounded-lg my-5" src={victoria} alt="victoria" />
+                        <img className="rounded-lg my-5" src={ghat} alt="ghat" />
+                        <Button className="text-[#B26C02] bg-transparent border border-[#B26C02] uppercase transition-all px-10 hover:bg-[#B26C02] shadow-md hover:border-black py-4 w-fit" variant={`outline`}>Explore More</Button>
+                    </div>
+               </section>
+               <section className="shadow-md rounded-lg flex items-center justify-center px-10 py-5 bg-neutral-300 w-1/3">
+                    <h1 className="inria text-6xl">Map</h1>
+               </section>
+            </div>    
         </main>
     )
 }
