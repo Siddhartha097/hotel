@@ -202,12 +202,15 @@ const Home = () => {
             </div>
 
             {/* Enquiry */}
-            <div className='flex justify-center flex-col py-6 md:py-10 lg:py-12 max-md:space-y-8 space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row'>
-               <section className="bg-[#5856562e] w-1/3 shadow-md px-10 py-6 rounded-lg">
+            <div className='flex justify-center flex-col-reverse py-6 md:py-10 lg:py-12 max-md:gap-7 md:space-x-8 inria px-6 mt-10 md:px-10 w-full md:flex-row'>
+               {/* Enquiry Form*/}
+               
+               <section className="bg-[#5856562e] w-1/3 max-md:w-full max-md:h-full shadow-md px-10 py-6 rounded-lg">
                     <h1 className="text-5xl font-bold my-6">Enquiry</h1>
                     <Enquiry />
                </section>
-               <section className="bg-[#000000A8] w-1/3 rounded-lg py-10 max-md:py-6 px-10 max-md:px-6">
+               {/* Explore */}
+               <section className="bg-[#000000A8] max-md:w-full w-1/3 rounded-lg py-10 max-md:py-6 px-10 max-md:px-6">
                     <div className="text-center">
                         <h1 className="text-white text-5xl inria">Explore the Tourism Spot Near By </h1>
                         <h2 className="island mt-5 text-[#B26C02] text-5xl">
@@ -220,8 +223,10 @@ const Home = () => {
                         <Button className="text-[#B26C02] bg-transparent border border-[#B26C02] uppercase transition-all px-10 hover:bg-[#B26C02] shadow-md hover:border-black py-4 w-fit" variant={`outline`}>Explore More</Button>
                     </div>
                </section>
-               <section className="shadow-md rounded-lg flex items-center justify-center px-10 py-5 bg-neutral-300 w-1/3">
-                    <h1 className="inria text-6xl">Map</h1>
+               {/* Map */}
+               <section className="shadow-md rounded-lg flex flex-col items-center justify-center w-1/3 max-md:w-full max-md:h-full">
+                    <h1 className="Inria font-semibold text-4xl mb-5">Maps</h1>
+                    <iframe className="w-full rounded-lg h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.33439927742!2d88.34735275!3d22.53542735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1708414039665!5m2!1sen!2sin" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                </section>
             </div>    
         </main>

@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
             <section className='w-full h-full md:flex'>
                 <div className='w-full items-center justify-between bg-[#E8B587A1]'>
                     <Navbar />
-                    <section className='flex px-20 py-12 pb-32 flex-col justify-center text-left space-y-2 '>
+                    <section className='flex px-20 py-12 max-md:p-10 flex-col justify-center text-left space-y-4 '>
                         <h1 className="text-4xl island text-[#B26C02EB] md:text-7xl">Memorable</h1>
                     
                         <h1 className='text-2xl md:text-5xl font-medium inria tracking-wider antialiased'>Hotels for 
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                     
                 </div>
                 <div className='h-full w-full relative'>
-                    <Button variant="outline" className='absolute bg-transparent text-white top-5 right-5'>Book Now</Button>
+                    <Button variant="outline" className='absolute bg-transparent text-white top-5 right-5 max-md:hidden'>Book Now</Button>
                     <img className='w-full object-fill' src={hero} alt='hero' />
                 </div>
             </section>
