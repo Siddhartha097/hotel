@@ -7,6 +7,7 @@ import Home from './pages/Home';
 
 //components
 import Footer from './components/Footer/Footer';
+import Hero from './components/Hero';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
     <>
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <BrowserRouter>
+          <Hero />
           <Routes>
             <Route path='/' element={<Home />} />
           </Routes>

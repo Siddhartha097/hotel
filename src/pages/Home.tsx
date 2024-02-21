@@ -1,22 +1,20 @@
 
 //components
 import Box from "@/components/Home/Box";
+import Options from "@/components/Home/Options";
+import Rooms from "@/components/Home/Rooms";
 import Testimonials from "@/components/Home/Testimonials";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, } from "@/components/ui/carousel";
-import Rooms from "@/components/Home/Rooms";
-import Options from "@/components/Home/Options";
-import Hero from "./Hero";
 
 //images
-import { about, bar, bedroom, cafe, drinks, food, ghat, hall, hotel, pool, room1, room2, room3, room4, spa, user1, user2, victoria } from "./images";
-import Features from "@/components/Home/Features";
 import Enquiry from "@/components/Home/Enquiry";
+import Features from "@/components/Home/Features";
+import { about, bar, bedroom, cafe, drinks, food, ghat, hall, hotel, pool, room1, room2, room3, room4, spa, user1, user2, victoria } from "./images";
 
 const Home = () => {
     return (
         <main className="w-full h-full mb-10">
-            <Hero />
 
             {/* Hotel Options */}
             <div className=" px-6 mt-0 md:px-10 ">

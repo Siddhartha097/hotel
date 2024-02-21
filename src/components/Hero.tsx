@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import { Button } from '@/components/ui/button';
 
 //images
-import { hero } from './images';
+import { hero } from '../pages/images';
 
 const Hero: React.FC = () => {
     return (
