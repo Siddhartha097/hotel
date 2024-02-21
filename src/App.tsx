@@ -4,10 +4,12 @@ import { ThemeProvider } from './components/ThemeProvider';
 
 //pages
 import Home from './pages/Home';
+import OurStory from './pages/OurStory';
 
 //components
 import Footer from './components/Footer/Footer';
 import Hero from './components/Hero';
+
 
 
 const App = () => {
@@ -19,6 +21,7 @@ const App = () => {
           <Hero />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/our_story' element={<OurStory />} />
           </Routes>
           <Footer />
         </BrowserRouter>

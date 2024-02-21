@@ -18,10 +18,14 @@ import user1 from './user1.png';
 import user2 from './user2.png';
 import victoria from './victoria.png';
 import ghat from './ghat.png';
+import story2 from './story2.png';
+import story1 from './story1.png';
 
 export { 
     user1,
     user2,
+    story1,
+    story2,
     food,
     pool,
     hotel,

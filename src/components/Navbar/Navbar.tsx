@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
             {/* Navbar Links */}
             <Button variant="outline" className='absolute bg-transparent text-white top-1/3 left-2/3 md:hidden'>Book Now</Button>
             <div className=' text-lg hover:text-neutral-400 hidden items-center justify-between space-x-8 md:flex p-6 font-semibold inter'>
-                <Link to="/our-story" className="text-black dark:text-white">Our Story</Link>
+                <Link to="/our_story" className="text-black dark:text-white">Our Story</Link>
                 <Link to="/packages" className="text-black dark:text-white poppins">Package</Link>
                 <Link to="/contact" className="text-black dark:text-white">Contact</Link>
             </div>
