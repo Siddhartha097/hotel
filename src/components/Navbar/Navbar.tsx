@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
         Book Now
       </Button>
       <div className=" text-lg hover:text-neutral-400 hidden items-center justify-between space-x-8 md:flex p-6 font-semibold inter">
-        <Link to="/our_story" className="text-black dark:text-white">
+        <Link to="/our%story" className="text-black dark:text-white">
           Our Story
         </Link>
         <Link to="/packages" className="text-black dark:text-white poppins">
