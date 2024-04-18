@@ -1,6 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { story1, user1 } from "./images";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import ExploreCard from "@/components/ExploreCard";
 
 const Explore = () => {
   return (
@@ -28,102 +26,43 @@ const Explore = () => {
       </section>
 
       <section className="flex items-center justify-between gap-5">
-        <Card className="p-2">
-          <CardHeader>
-            <img className="rounded-lg" src={story1} alt="cardImg" />
-          </CardHeader>
-          <CardContent className="bg-black rounded-lg text-white inria px-4 py-2 space-y-4">
-            <h1 className="text">1.Victoria Memorable Hall</h1>
-            <div className="space-y-4">
-              <p>4.5 stars</p>
-              <div className="flex items-center gap-4">
-                <Avatar className="">
-                  <AvatarImage src={user1} />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <p>By Rahim Sheikh</p>
-              </div>
-              <p className="text-xs">
-                Embark on a sensory odyssey as you explore the vibrant tapestry
-                of Kolkata's cityscape. Wander through the historical lanes
-                adorned with colonial architecture, seems stand still.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="p-2">
-          <CardHeader>
-            <img className="rounded-lg" src={story1} alt="cardImg" />
-          </CardHeader>
-          <CardContent className="bg-black rounded-lg text-white inria px-4 py-2 space-y-4">
-            <h1 className="text">1.Victoria Memorable Hall</h1>
-            <div className="space-y-4">
-              <p>4.5 stars</p>
-              <div className="flex items-center gap-4">
-                <Avatar className="">
-                  <AvatarImage src={user1} />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <p>By Rahim Sheikh</p>
-              </div>
-              <p className="text-xs">
-                Embark on a sensory odyssey as you explore the vibrant tapestry
-                of Kolkata's cityscape. Wander through the historical lanes
-                adorned with colonial architecture, seems stand still.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="p-2">
-          <CardHeader>
-            <img className="rounded-lg" src={story1} alt="cardImg" />
-          </CardHeader>
-          <CardContent className="bg-black rounded-lg text-white inria px-4 py-2 space-y-4">
-            <h1 className="text">1.Victoria Memorable Hall</h1>
-            <div className="space-y-4">
-              <p>4.5 stars</p>
-              <div className="flex items-center gap-4">
-                <Avatar className="">
-                  <AvatarImage src={user1} />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <p>By Rahim Sheikh</p>
-              </div>
-              <p className="text-xs">
-                Embark on a sensory odyssey as you explore the vibrant tapestry
-                of Kolkata's cityscape. Wander through the historical lanes
-                adorned with colonial architecture, seems stand still.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="p-2">
-          <CardHeader>
-            <img className="rounded-lg" src={story1} alt="cardImg" />
-          </CardHeader>
-          <CardContent className="bg-black rounded-lg text-white inria px-4 py-2 space-y-4">
-            <h1 className="text">1.Victoria Memorable Hall</h1>
-            <div className="space-y-4">
-              <p>4.5 stars</p>
-              <div className="flex items-center gap-4">
-                <Avatar className="">
-                  <AvatarImage src={user1} />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <p>By Rahim Sheikh</p>
-              </div>
-              <p className="text-xs">
-                Embark on a sensory odyssey as you explore the vibrant tapestry
-                of Kolkata's cityscape. Wander through the historical lanes
-                adorned with colonial architecture, seems stand still.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-        
+        <ExploreCard
+          title="1.Victoria Memorable Hall"
+          rating="4.5"
+          author="Rahim Sheikh"
+          content=" Embark on a sensory odyssey as you explore the vibrant tapestry
+          of Kolkata's cityscape. Wander through the historical lanes
+          adorned with colonial architecture, seems stand still."
+        />
       </section>
     </main>
   );
 };
 
 export default Explore;
+
+{
+  /* <Card className="p-2">
+          <CardHeader>
+            <img className="rounded-lg" src={story1} alt="cardImg" />
+          </CardHeader>
+          <CardContent className="bg-black rounded-lg text-white inria px-4 py-2 space-y-4">
+            <h1 className="text">1.Victoria Memorable Hall</h1>
+            <div className="space-y-4">
+              <p>4.5 stars</p>
+              <div className="flex items-center gap-4">
+                <Avatar className="">
+                  <AvatarImage src={user1} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+                <p>By Rahim Sheikh</p>
+              </div>
+              <p className="text-xs">
+                Embark on a sensory odyssey as you explore the vibrant tapestry
+                of Kolkata's cityscape. Wander through the historical lanes
+                adorned with colonial architecture, seems stand still.
+              </p>
+            </div>
+          </CardContent>
+        </Card> */
+}
