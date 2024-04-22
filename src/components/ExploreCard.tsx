@@ -1,6 +1,7 @@
 import { story1, user1 } from "@/pages/images";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Card, CardContent, CardHeader } from "./ui/card";
+import { cn } from "@/lib/utils";
 
 interface ExploreCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface ExploreCardProps {
   avatarImage?: string;
   author?: string;
   content?: string;
+  className?: string;
 }
 
 const ExploreCard: React.FC<ExploreCardProps> = ({
@@ -18,9 +20,10 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
   avatarImage = user1,
   author = "ABC",
   content,
+  className,
 }) => {
   return (
-    <Card className="p-2">
+    <Card className={cn("p-2", className)}>
       <CardHeader>
         <img className="rounded-lg" src={headerImage} alt="cardImg" />
       </CardHeader>
@@ -35,9 +38,7 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
             </Avatar>
             <p>By {author}</p>
           </div>
-          <p className="text-xs">
-            {content}
-          </p>
+          <p className="text-xs">{content}</p>
         </div>
       </CardContent>
     </Card>

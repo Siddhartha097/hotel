@@ -1,4 +1,5 @@
 import ExploreCard from "@/components/ExploreCard";
+import { VisitingPlaces } from "@/data";
 
 const Explore = () => {
   return (
@@ -25,15 +26,24 @@ const Explore = () => {
         </div>
       </section>
 
-      <section className="flex items-center justify-between gap-5">
-        <ExploreCard
-          title="1.Victoria Memorable Hall"
-          rating="4.5"
-          author="Rahim Sheikh"
-          content=" Embark on a sensory odyssey as you explore the vibrant tapestry
-          of Kolkata's cityscape. Wander through the historical lanes
-          adorned with colonial architecture, seems stand still."
-        />
+      <section className="flex flex-col items-center justify-between gap-10">
+        {VisitingPlaces.map((rows) => (
+          <section
+            className="flex items-center justify-between gap-5"
+            key={rows.id}
+          >
+            {rows.list.map((place) => (
+              <ExploreCard
+                className="w-1/4"
+                key={place.id}
+                title={place.title}
+                content={place.content}
+                author={place.author}
+                rating={place.rating}
+              />
+            ))}
+          </section>
+        ))}
       </section>
     </main>
   );
