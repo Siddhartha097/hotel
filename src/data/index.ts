@@ -1,10 +1,9 @@
-import { dakhineswar, howrahBridge, motherHouse } from "@/assets/images";
-import { victoria } from "@/pages/images";
+import { dakhineswar, howrahBridge, motherHouse, victoriaM } from "@/assets/images";
 
 const firstRow = [
   {
     id: 1,
-    img: victoria,
+    img: victoriaM,
     author: "Rahim Sheikh",
     content:
       "Embark on a sensory odyssey as you explore the vibrant tapestry of Kolkata's cityscape. Wander through the historical lanes adorned with colonial architecture, seems stand still.",
@@ -36,7 +35,7 @@ const firstRow = [
     author: "Rahim Sheikh",
     content: "",
     title: "4.Mother House",
-    rating: "4.5",
+    rating: "",
     avatar: "",
   },
 ];
