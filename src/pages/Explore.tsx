@@ -35,9 +35,9 @@ const Explore = () => {
             {rows.list.map((place) => (
               <ExploreCard
                 className="w-1/4"
+                headerImage={place.img}
                 key={place.id}
                 title={place.title}
-                content={place.content}
                 author={place.author}
                 rating={place.rating}
               />
