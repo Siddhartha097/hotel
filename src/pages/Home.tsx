@@ -29,6 +29,7 @@ import {
   user2,
   victoria,
 } from "./images";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -241,12 +242,14 @@ const Home = () => {
             </h2>
             <img className="rounded-lg my-5" src={victoria} alt="victoria" />
             <img className="rounded-lg my-5" src={ghat} alt="ghat" />
-            <Button
-              className="text-[#B26C02] bg-transparent border border-[#B26C02] uppercase transition-all px-10 hover:bg-[#B26C02] shadow-md hover:border-black py-4 w-fit"
-              variant={`outline`}
-            >
-              Explore More
-            </Button>
+            <Link to="explore">
+              <Button
+                className="text-[#B26C02] bg-transparent border border-[#B26C02] uppercase transition-all px-10 hover:bg-[#B26C02] shadow-md hover:border-black py-4 w-fit"
+                variant={`outline`}
+              >
+                Explore More
+              </Button>
+            </Link>
           </div>
         </section>
         {/* Map */}
