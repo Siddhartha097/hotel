@@ -24,8 +24,8 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
   className,
 }) => {
   return (
-    <Card className={cn("p-2 flex flex-col items-center justify-center gap-2 h-[65vh]", className)}>
-      <CardHeader className="h-[25vh]">
+    <Card className={cn("p-2 flex flex-col items-center justify-center gap-2 h-[60vh]", className)}>
+      <CardHeader className="h-[22vh]">
         <img className="rounded-lg overflow-hidden" src={headerImage} alt="cardImg" />
       </CardHeader>
       <CardContent className="bg-black rounded-lg text-white inria p-4 space-y-4 h-full">

@@ -9,9 +9,13 @@ import parkStreet from "./park_street.webp";
 import princepGhat from "./princep_ghat.jpg";
 import psCemetery from "./ps_cemetry.jpg";
 import victoriaM from "./victoria.png";
-import howrahBridge from "./howrah_bridge.jpg"
+import howrahBridge from "./howrah_bridge.jpg";
+import male from "./male.png";
+import female from "./female.png";
 
 export {
+  male,
+  female,
   birlaMandir,
   dakhineswar,
   collegeStreet,
@@ -23,5 +27,5 @@ export {
   princepGhat,
   psCemetery,
   victoriaM,
-  howrahBridge
+  howrahBridge,
 };

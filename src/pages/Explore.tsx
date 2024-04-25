@@ -40,6 +40,8 @@ const Explore = () => {
                 title={place.title}
                 author={place.author}
                 rating={place.rating}
+                avatarImage={place.avatar}
+                content={place.content}
               />
             ))}
           </section>
