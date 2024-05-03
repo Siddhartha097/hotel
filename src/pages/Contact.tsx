@@ -49,7 +49,10 @@ const Contact = () => {
       </h1>
       <div className="container w-3/4 py-8 border-white border-2 rounded-lg shadow-md">
         <Form {...form}>
-          <form className="w-full space-y-7" onSubmit={form.handleSubmit(onSubmit)}>
+          <form
+            className="w-full space-y-7"
+            onSubmit={form.handleSubmit(onSubmit)}
+          >
             <div className="flex items-center justify-evenly">
               <FormField
                 control={form.control}
@@ -87,11 +90,11 @@ const Contact = () => {
               />
             </div>
             <Button
-            className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
-            type="submit"
-          >
-            Enquire Now
-          </Button>
+              className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
+              type="submit"
+            >
+              Enquire Now
+            </Button>
           </form>
         </Form>
       </div>
