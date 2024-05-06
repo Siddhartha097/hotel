@@ -45,7 +45,7 @@ const Contact = () => {
     });
   };
 
-  const [value, setValue] = useState("IN");
+  const [value, setValue] = useState('in');
 
   return (
     <main className="bg-[#E8B587A1] p-8 flex flex-col gap-10">
