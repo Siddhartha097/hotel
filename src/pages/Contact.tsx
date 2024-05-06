@@ -12,6 +12,9 @@ import { toast } from "@/components/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import { useState } from "react";
 
 const EnquireFormSchema = z.object({
   FirstName: z.string().min(5).max(20),
@@ -41,6 +44,8 @@ const Contact = () => {
       title: "Enquiry Sent Successfully",
     });
   };
+
+  const [value, setValue] = useState("IN");
 
   return (
     <main className="bg-[#E8B587A1] p-8 flex flex-col gap-10">
@@ -89,6 +94,11 @@ const Contact = () => {
                 )}
               />
             </div>
+            <PhoneInput
+              country={value}
+              placeholder="Enter your phone number"
+              onChange={(country) => {setValue(country)}}
+            />
             <Button
               className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
               type="submit"
