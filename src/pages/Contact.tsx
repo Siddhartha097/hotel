@@ -98,6 +98,7 @@ const Contact = () => {
               country={value}
               placeholder="Enter your phone number"
               onChange={(country) => {setValue(country)}}
+              countryCodeEditable={false}
             />
             <Button
               className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
