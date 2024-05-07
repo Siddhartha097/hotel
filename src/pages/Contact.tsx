@@ -15,6 +15,7 @@ import { z } from "zod";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useState } from "react";
+import { Textarea } from "@/components/ui/textarea";
 
 const EnquireFormSchema = z.object({
   FirstName: z.string().min(5, "First name should be at least 5 words longer"),
@@ -109,7 +110,7 @@ const Contact = () => {
                       <FormLabel className="font-semibold">Email</FormLabel>
                       <FormControl>
                         <Input
-                          className="border border-neutral-500 w-full shadow-inner shadow-black"
+                          className="border border-neutral-500 w-full shadow-inner shadow-black row-span-1"
                           placeholder=""
                           {...field}
                         />
@@ -141,7 +142,6 @@ const Contact = () => {
                           inputClass="border border-neutral-500 w-full shadow-inner shadow-black w-max"
                           containerClass="w-full"
                           buttonClass="border border-neutral-500"
-                          
                         />
                       </FormControl>
                       <FormMessage />
@@ -149,6 +149,23 @@ const Contact = () => {
                   )}
                 />
               </div>
+              <FormField
+                control={form.control}
+                name="Address"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="font-semibold">Address</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="border row-span-2 border-neutral-500 w-full shadow-inner shadow-black"
+                        placeholder=""
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </div>
             <Button
               className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
