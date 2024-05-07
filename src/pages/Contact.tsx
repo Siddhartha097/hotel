@@ -100,7 +100,7 @@ const Contact = () => {
             </div>
 
             {/* phone number, email and address     */}
-            <div className="grid grid-cols-2 grid-rows-2 gap-8">
+            <div className="grid grid-cols-2 gap-8">
               <div className="grid gap-5">
                 <FormField
                   control={form.control}
@@ -167,6 +167,63 @@ const Contact = () => {
                 )}
               />
             </div>
+
+            {/* age and country */}
+            <div className="grid grid-cols-2 gap-8">
+              <FormField
+                control={form.control}
+                name="Age"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="font-semibold">Age</FormLabel>
+                    <FormControl>
+                      <Input
+                        className="border border-neutral-500 w-full shadow-inner shadow-black"
+                        placeholder=""
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="Country"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="font-semibold">Country</FormLabel>
+                    <FormControl>
+                      <Input
+                        className="border border-neutral-500 shadow-inner shadow-black"
+                        placeholder=""
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            {/* text */}
+            <FormField
+                control={form.control}
+                name="Text"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="font-semibold">Text</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="border row-span-2 border-neutral-500 w-full shadow-inner shadow-black"
+                        placeholder=""
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             <Button
               className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
               type="submit"
