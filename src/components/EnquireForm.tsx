@@ -16,6 +16,7 @@ import { Input } from "./ui/input";
 import PhoneInput from "react-phone-input-2";
 import { Textarea } from "./ui/textarea";
 import ReactFlagsSelect from "react-flags-select";
+import { cn } from "@/lib/utils";
 
 const EnquireFormSchema = z.object({
   FirstName: z.string().min(5, "First name should be at least 5 words longer"),
@@ -28,7 +29,11 @@ const EnquireFormSchema = z.object({
   Email: z.string(),
 });
 
-const EnquireForm = () => {
+interface EnquireFormProps {
+    className?: string;
+}
+
+const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
   const form = useForm<z.infer<typeof EnquireFormSchema>>({
     resolver: zodResolver(EnquireFormSchema),
     defaultValues: {
@@ -50,12 +55,10 @@ const EnquireForm = () => {
     
   };
 
-//   const [value, setValue] = useState("in");
-
   const [selected, setSelected] = useState("");
 
   return (
-    <div className="container w-1/2 py-8 border-white border-2 rounded-lg shadow-md">
+    <div className={cn("container w-1/2 py-8 border-white border-2 rounded-lg shadow-md", className)}>
       <Form {...form}>
         <form
           className="w-full space-y-7 grid"
@@ -134,6 +137,7 @@ const EnquireForm = () => {
                         inputClass=""
                         buttonClass="border border-neutral-500"
                         {...field}
+                        enableSearch
                       />
                     </FormControl>
                     <FormMessage />
