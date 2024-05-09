@@ -134,7 +134,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
                         country="in"
                         placeholder="Enter your phone number"
                         countryCodeEditable={false}
-                        inputClass=""
+                        inputClass="w-max rounded-lg shadow-inner shadow-black"
                         buttonClass="border border-neutral-500"
                         {...field}
                         enableSearch

@@ -13,11 +13,14 @@ import EnquireForm from "@/components/EnquireForm";
 
 const Contact = () => {
   return (
-    <main className="bg-[#E8B587A1] p-8 flex flex-col gap-10">
-      <h1 className="island text-4xl md:text-7xl text-yellow-700 px-8">
+    <main className="bg-[#E8B587A1] p-8 gap-10 grid">
+      <h1 className="island text-4xl md:text-7xl text-yellow-700 px-8 text-center">
         Enquire Now
       </h1>
       <EnquireForm className="md:w-2/3" />
+      <div>
+
+      </div>
     </main>
   );
 };
