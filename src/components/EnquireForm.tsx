@@ -17,6 +17,7 @@ import PhoneInput from "react-phone-input-2";
 import { Textarea } from "./ui/textarea";
 import ReactFlagsSelect from "react-flags-select";
 import { cn } from "@/lib/utils";
+import { useToast } from "./ui/use-toast";
 
 const EnquireFormSchema = z.object({
   FirstName: z.string().min(5, "First name should be at least 5 words longer"),
@@ -29,11 +30,14 @@ const EnquireFormSchema = z.object({
   Email: z.string(),
 });
 
-interface EnquireFormProps {
+export interface EnquireFormProps {
     className?: string;
 }
 
 const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
+
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof EnquireFormSchema>>({
     resolver: zodResolver(EnquireFormSchema),
     defaultValues: {
@@ -48,9 +52,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
   });
 
   const onSubmit = (data: z.infer<typeof EnquireFormSchema>) => {
-    // toast({
-    //   title: "Enquiry Sent Successfully",
-    // });
+   
     console.log(JSON.stringify(data));
     
   };
@@ -58,14 +60,14 @@ const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
   const [selected, setSelected] = useState("");
 
   return (
-    <div className={cn("container w-1/2 py-8 border-white border-2 rounded-lg shadow-md", className)}>
+    <div className={cn("container md:w-1/2 py-8 border-white border-2 rounded-lg shadow-md", className)}>
       <Form {...form}>
         <form
           className="w-full space-y-7 grid"
           onSubmit={form.handleSubmit(onSubmit)}
         >
           {/* first and last name */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 grid-rows-2 gap-8">
             <FormField
               control={form.control}
               name="FirstName"
@@ -103,7 +105,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
           </div>
 
           {/* phone number, email and address     */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="grid gap-5">
               <FormField
                 control={form.control}
@@ -165,7 +167,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
           </div>
 
           {/* age and country */}
-          <div className="grid grid-cols-2 gap-8 pt-5">
+          <div className="grid md:grid-cols-2 gap-8 pt-5">
             <FormField
               control={form.control}
               name="Age"
@@ -234,6 +236,11 @@ const EnquireForm: React.FC<EnquireFormProps> = ({ className }) => {
           <Button
             className="bg-[#B26C02] font-semibold shadow-md transition-all hover:bg-[#B26C02]/70 w- p-8 text-lg tracking-wid uppercase"
             type="submit"
+            onClick={() => {
+              toast({
+                description: "Enquiry Sent Successfully",
+              })
+            }}
           >
             Enquire Now
           </Button>
